@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<package format="2">
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
   <name>kuka_experimental</name>
   <version>0.1.0</version>
   <description>Experimental packages for KUKA manipulators within ROS-Industrial.</description>
@@ -11,8 +12,10 @@
   <url type="bugtracker">https://github.com/ros-industrial/kuka_experimental/issues</url>
   <url type="repository">https://github.com/ros-industrial/kuka_experimental</url>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <!-- ROS 2 Build System -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
 
+  <!-- ROS 2 Package Dependencies -->
   <exec_depend>kuka_kr10_support</exec_depend>
   <exec_depend>kuka_kr120_support</exec_depend>
   <exec_depend>kuka_kr150_support</exec_depend>
@@ -22,11 +25,14 @@
   <exec_depend>kuka_kr6_support</exec_depend>
   <exec_depend>kuka_lbr_iiwa_support</exec_depend>
   <exec_depend>kuka_resources</exec_depend>
-  <exec_depend>kuka_eki_hw_interface</exec_depend>
-  <exec_depend>kuka_rsi_hw_interface</exec_depend>
-  <exec_depend>kuka_rsi_simulator</exec_depend>
+
+  <!-- Modern ROS 2 Control Dependencies -->
+  <exec_depend>ros2_control</exec_depend>
+  <exec_depend>ros2_controllers</exec_depend>
+  <exec_depend>hardware_interface</exec_depend>
 
   <export>
+    <build_type>ament_cmake</build_type>
     <metapackage/>
   </export>
 </package>
