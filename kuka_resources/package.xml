@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package format="3">
+<package format="2">
   <name>kuka_resources</name>
   <version>0.1.0</version>
   <description>
@@ -19,13 +19,9 @@
   <url type="bugtracker">https://github.com/ros-industrial/kuka_experimental/issues</url>
   <url type="repository">https://github.com/ros-industrial/kuka_experimental</url>
 
-  <buildtool_depend>ament_cmake</buildtool_depend>
-
-  <exec_depend>launch</exec_depend>  <!-- Needed for ROS 2 launch files -->
-  <exec_depend>launch_ros</exec_depend>  <!-- Needed for ROS 2 launch system -->
+  <buildtool_depend>catkin</buildtool_depend>
 
   <export>
-    <build_type>ament_cmake</build_type>
-    <metapackage/>
+    <architecture_independent />
   </export>
 </package>

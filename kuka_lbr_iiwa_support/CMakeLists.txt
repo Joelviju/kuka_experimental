@@ -1,30 +1,23 @@
-cmake_minimum_required(VERSION 3.8)
-
+cmake_minimum_required(VERSION 3.0.2)
 project(kuka_lbr_iiwa_support)
 
-# Find the required ROS 2 build system
-find_package(ament_cmake REQUIRED)
+find_package(catkin REQUIRED)
 
-# Install configuration files, launch files, and URDFs
+catkin_package()
+
 install(DIRECTORY config launch urdf
-  DESTINATION share/${PROJECT_NAME}
-)
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 
-# Temporarily install collision meshes
+# temporarily: until sources are moved to other org/rep
 install(
   DIRECTORY
     meshes/lbr_iiwa_14_r820/collision
   DESTINATION
-    share/${PROJECT_NAME}/meshes/lbr_iiwa_14_r820/
-)
+    ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes/lbr_iiwa_14_r820/)
 
-# Temporarily install visual meshes
+# temporarily: until sources are moved to other org/rep
 install(
   DIRECTORY
     meshes/lbr_iiwa_14_r820/visual
   DESTINATION
-    share/${PROJECT_NAME}/meshes/lbr_iiwa_14_r820/
-)
-
-# Finalize package
-ament_package()
+    ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes/lbr_iiwa_14_r820/)

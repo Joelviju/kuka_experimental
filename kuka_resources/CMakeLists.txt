@@ -1,14 +1,9 @@
-cmake_minimum_required(VERSION 3.8)
-
+cmake_minimum_required(VERSION 3.0.2)
 project(kuka_resources)
 
-# Find the required ROS 2 build system
-find_package(ament_cmake REQUIRED)
+find_package(catkin REQUIRED)
 
-# Install URDF files
+catkin_package()
+
 install(DIRECTORY urdf
-  DESTINATION share/${PROJECT_NAME}
-)
-
-# Finalize package
-ament_package()
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})

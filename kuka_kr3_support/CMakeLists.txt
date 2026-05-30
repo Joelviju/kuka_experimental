@@ -1,21 +1,15 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.0.2)
 
 project(kuka_kr3_support)
 
-# Find required ROS 2 packages
-find_package(ament_cmake REQUIRED)
+find_package(catkin REQUIRED)
 
-# Enable testing if needed
-if (BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  ament_lint_auto_find_test_dependencies()
+catkin_package()
+
+if (CATKIN_ENABLE_TESTING)
+  find_package(roslaunch REQUIRED)
+  roslaunch_add_file_check(test/roslaunch_test_kr3r540.xml)
 endif()
 
-# Install package files (configuration, launch, meshes, URDFs)
 install(DIRECTORY config launch meshes urdf
-  DESTINATION share/${PROJECT_NAME}
-)
-
-# Finalize package
-ament_package()
-
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
