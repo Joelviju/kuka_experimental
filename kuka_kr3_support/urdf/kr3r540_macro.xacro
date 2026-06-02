@@ -11,6 +11,18 @@
         </geometry>
         <xacro:material_kuka_pedestal />
       </visual>
+      <inertial>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <mass value="10"/>
+
+  <inertia
+      ixx="0.10"
+      iyy="0.10"
+      izz="0.10"
+      ixy="0"
+      ixz="0"
+      iyz="0"/>
+</inertial>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -26,6 +38,18 @@
         </geometry>
         <xacro:material_kuka_ral_pure_white />
       </visual>
+      <inertial>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <mass value="6"/>
+
+  <inertia
+      ixx="0.06"
+      iyy="0.06"
+      izz="0.06"
+      ixy="0"
+      ixz="0"
+      iyz="0"/>
+</inertial>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -41,6 +65,18 @@
         </geometry>
         <xacro:material_kuka_ral_pure_white />
       </visual>
+      <inertial>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <mass value="4"/>
+
+  <inertia
+      ixx="0.04"
+      iyy="0.04"
+      izz="0.04"
+      ixy="0"
+      ixz="0"
+      iyz="0"/>
+</inertial>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -56,6 +92,18 @@
         </geometry>
         <xacro:material_kuka_ral_pure_white />
       </visual>
+      <inertial>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <mass value="3"/>
+
+  <inertia
+      ixx="0.03"
+      iyy="0.03"
+      izz="0.03"
+      ixy="0"
+      ixz="0"
+      iyz="0"/>
+</inertial>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -71,6 +119,18 @@
         </geometry>
         <xacro:material_kuka_ral_pure_white />
       </visual>
+      <inertial>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <mass value="1.5"/>
+
+  <inertia
+      ixx="0.015"
+      iyy="0.015"
+      izz="0.015"
+      ixy="0"
+      ixz="0"
+      iyz="0"/>
+</inertial>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -86,6 +146,18 @@
         </geometry>
         <xacro:material_kuka_ral_pure_white />
       </visual>
+      <inertial>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <mass value="1.0"/>
+
+  <inertia
+      ixx="0.01"
+      iyy="0.01"
+      izz="0.01"
+      ixy="0"
+      ixz="0"
+      iyz="0"/>
+</inertial>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -101,6 +173,18 @@
         </geometry>
         <xacro:material_kuka_pedestal />
       </visual>
+      <inertial>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <mass value="0.5"/>
+
+  <inertia
+      ixx="0.005"
+      iyy="0.005"
+      izz="0.005"
+      ixy="0"
+      ixz="0"
+      iyz="0"/>
+</inertial>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -117,42 +201,42 @@
       <parent link="${prefix}base_link"/>
       <child link="${prefix}link_1"/>
       <axis xyz="0 0 -1"/>
-      <limit lower="${radians(-170)}" upper="${radians(170)}" effort="0" velocity="${radians(530)}"/>
+      <limit lower="${radians(-170)}" upper="${radians(170)}" effort="100" velocity="${radians(530)}"/>
     </joint>
     <joint name="${prefix}joint_a2" type="revolute">
       <origin xyz="0.020 0 0" rpy="0 0 0"/>
       <parent link="${prefix}link_1"/>
       <child link="${prefix}link_2"/>
       <axis xyz="0 1 0"/>
-      <limit lower="${radians(-170)}" upper="${radians(50)}" effort="0" velocity="${radians(529)}"/>
+      <limit lower="${radians(-170)}" upper="${radians(50)}" effort="100" velocity="${radians(529)}"/>
     </joint>
     <joint name="${prefix}joint_a3" type="revolute">
       <origin xyz="0.260 0 0" rpy="0 0 0"/>
       <parent link="${prefix}link_2"/>
       <child link="${prefix}link_3"/>
       <axis xyz="0 1 0"/>
-      <limit lower="${radians(-110)}" upper="${radians(155)}" effort="0" velocity="${radians(538)}"/>
+      <limit lower="${radians(-110)}" upper="${radians(155)}" effort="80" velocity="${radians(538)}"/>
     </joint>
     <joint name="${prefix}joint_a4" type="revolute">
       <origin xyz="0 0 0.020" rpy="0 0 0"/>
       <parent link="${prefix}link_3"/>
       <child link="${prefix}link_4"/>
       <axis xyz="-1 0 0"/>
-      <limit lower="${radians(-175)}" upper="${radians(175)}" effort="0" velocity="${radians(600)}"/>
+      <limit lower="${radians(-175)}" upper="${radians(175)}" effort="30" velocity="${radians(600)}"/>
     </joint>
     <joint name="${prefix}joint_a5" type="revolute">
       <origin xyz="0.260 0 0" rpy="0 0 0"/>
       <parent link="${prefix}link_4"/>
       <child link="${prefix}link_5"/>
       <axis xyz="0 1 0"/>
-      <limit lower="${radians(-120)}" upper="${radians(120)}" effort="0" velocity="${radians(600)}"/>
+      <limit lower="${radians(-120)}" upper="${radians(120)}" effort="30" velocity="${radians(600)}"/>
     </joint>
     <joint name="${prefix}joint_a6" type="revolute">
       <origin xyz="0.075 0 0" rpy="0 0 0"/>
       <parent link="${prefix}link_5"/>
       <child link="${prefix}link_6"/>
       <axis xyz="-1 0 0"/>
-      <limit lower="${radians(-350)}" upper="${radians(350)}" effort="0" velocity="${radians(800)}"/>
+      <limit lower="${radians(-350)}" upper="${radians(350)}" effort="15" velocity="${radians(800)}"/>
     </joint>
     <joint name="${prefix}joint_a6-tool0" type="fixed">
       <parent link="${prefix}link_6"/>

@@ -9,6 +9,21 @@
           <mesh filename="package://kuka_lbr_iiwa_support/meshes/lbr_iiwa_14_r820/visual/base_link.dae" />
         </geometry>
       </visual>
+
+      <inertial>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+
+  <mass value="25"/>
+
+  <inertia
+      ixx="0.25"
+      ixy="0"
+      ixz="0"
+      iyy="0.25"
+      iyz="0"
+      izz="0.25"/>
+</inertial>
+      
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -23,6 +38,19 @@
           <mesh filename="package://kuka_lbr_iiwa_support/meshes/lbr_iiwa_14_r820/visual/link_1.dae" />
         </geometry>
       </visual>
+      <inertial>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+
+  <mass value="10"/>
+
+  <inertia
+      ixx="0.10"
+      ixy="0"
+      ixz="0"
+      iyy="0.10"
+      iyz="0"
+      izz="0.10"/>
+</inertial>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -37,6 +65,19 @@
           <mesh filename="package://kuka_lbr_iiwa_support/meshes/lbr_iiwa_14_r820/visual/link_2.dae" />
         </geometry>
       </visual>
+      <inertial>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+
+  <mass value="8"/>
+
+  <inertia
+      ixx="0.08"
+      ixy="0"
+      ixz="0"
+      iyy="0.08"
+      iyz="0"
+      izz="0.08"/>
+</inertial>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -51,6 +92,19 @@
           <mesh filename="package://kuka_lbr_iiwa_support/meshes/lbr_iiwa_14_r820/visual/link_3.dae" />
         </geometry>
       </visual>
+      <inertial>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+
+  <mass value="6"/>
+
+  <inertia
+      ixx="0.06"
+      ixy="0"
+      ixz="0"
+      iyy="0.06"
+      iyz="0"
+      izz="0.06"/>
+</inertial>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -65,6 +119,19 @@
           <mesh filename="package://kuka_lbr_iiwa_support/meshes/lbr_iiwa_14_r820/visual/link_4.dae" />
         </geometry>
       </visual>
+      <inertial>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+
+  <mass value="5"/>
+
+  <inertia
+      ixx="0.05"
+      ixy="0"
+      ixz="0"
+      iyy="0.05"
+      iyz="0"
+      izz="0.05"/>
+</inertial>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -79,6 +146,19 @@
           <mesh filename="package://kuka_lbr_iiwa_support/meshes/lbr_iiwa_14_r820/visual/link_5.dae" />
         </geometry>
       </visual>
+      <inertial>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+
+  <mass value="3"/>
+
+  <inertia
+      ixx="0.03"
+      ixy="0"
+      ixz="0"
+      iyy="0.03"
+      iyz="0"
+      izz="0.03"/>
+</inertial>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -93,6 +173,19 @@
           <mesh filename="package://kuka_lbr_iiwa_support/meshes/lbr_iiwa_14_r820/visual/link_6.dae" />
         </geometry>
       </visual>
+      <inertial>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+
+  <mass value="2"/>
+
+  <inertia
+      ixx="0.02"
+      ixy="0"
+      ixz="0"
+      iyy="0.02"
+      iyz="0"
+      izz="0.02"/>
+</inertial>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -107,6 +200,19 @@
           <mesh filename="package://kuka_lbr_iiwa_support/meshes/lbr_iiwa_14_r820/visual/link_7.dae" />
         </geometry>
       </visual>
+      <inertial>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+
+  <mass value="1"/>
+
+  <inertia
+      ixx="0.01"
+      ixy="0"
+      ixz="0"
+      iyy="0.01"
+      iyz="0"
+      izz="0.01"/>
+</inertial>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -123,49 +229,49 @@
       <parent link="${prefix}base_link" />
       <child link="${prefix}link_1" />
       <axis xyz="0 0 1" />
-      <limit lower="-2.9668" upper="2.9668" effort="0" velocity="1.4834" />
+      <limit lower="-2.9668" upper="2.9668" effort="300" velocity="1.4834" />
     </joint>
     <joint name="${prefix}joint_a2" type="revolute">
       <origin xyz="-0.00043624 0 0.36" rpy="0 0 0" />
       <parent link="${prefix}link_1" />
       <child link="${prefix}link_2" />
       <axis xyz="0 1 0" />
-      <limit lower="-2.0942" upper="2.0942" effort="0" velocity="1.4834" />
+      <limit lower="-2.0942" upper="2.0942" effort="300" velocity="1.4834" />
     </joint>
     <joint name="${prefix}joint_a3" type="revolute">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <parent link="${prefix}link_2" />
       <child link="${prefix}link_3" />
       <axis xyz="0 0 1" />
-      <limit lower="-2.9668" upper="2.9668" effort="0" velocity="1.7452" />
+      <limit lower="-2.9668" upper="2.9668" effort="250" velocity="1.7452" />
     </joint>
     <joint name="${prefix}joint_a4" type="revolute">
       <origin xyz="0.00043624 0 0.42" rpy="0 0 0" />
       <parent link="${prefix}link_3" />
       <child link="${prefix}link_4" />
       <axis xyz="0 -1 0" />
-      <limit lower="-2.0942" upper="2.0942" effort="0" velocity="1.3089" />
+      <limit lower="-2.0942" upper="2.0942" effort="200" velocity="1.3089" />
     </joint>
     <joint name="${prefix}joint_a5" type="revolute">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <parent link="${prefix}link_4" />
       <child link="${prefix}link_5" />
       <axis xyz="0 0 1" />
-      <limit lower="-2.9668" upper="2.9668" effort="0" velocity="2.2688" />
+      <limit lower="-2.9668" upper="2.9668" effort="150" velocity="2.2688" />
     </joint>
     <joint name="${prefix}joint_a6" type="revolute">
       <origin xyz="0 0 0.4" rpy="0 0 0" />
       <parent link="${prefix}link_5" />
       <child link="${prefix}link_6" />
       <axis xyz="0 1 0" />
-      <limit lower="-2.0942" upper="2.0942" effort="0" velocity="2.356" />
+      <limit lower="-2.0942" upper="2.0942" effort="100" velocity="2.356" />
     </joint>
     <joint name="${prefix}joint_a7" type="revolute">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <parent link="${prefix}link_6" />
       <child link="${prefix}link_7" />
       <axis xyz="0 0 1" />
-      <limit lower="-3.0541" upper="3.0541" effort="0" velocity="2.356" />
+      <limit lower="-3.0541" upper="3.0541" effort="80" velocity="2.356" />
     </joint>
     <joint name="${prefix}joint_a7-tool0" type="fixed">
       <origin xyz="0 0 0.126" rpy="0 0 0" />
@@ -182,6 +288,98 @@
       <parent link="${prefix}base_link"/>
       <child link="${prefix}base"/>
     </joint>
+
+    <transmission name="${prefix}joint_a1_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+
+  <joint name="${prefix}joint_a1">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+
+  <actuator name="${prefix}joint_a1_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="${prefix}joint_a2_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+
+  <joint name="${prefix}joint_a2">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+
+  <actuator name="${prefix}joint_a2_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="${prefix}joint_a3_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+
+  <joint name="${prefix}joint_a3">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+
+  <actuator name="${prefix}joint_a3_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="${prefix}joint_a4_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+
+  <joint name="${prefix}joint_a4">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+
+  <actuator name="${prefix}joint_a4_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="${prefix}joint_a5_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+
+  <joint name="${prefix}joint_a5">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+
+  <actuator name="${prefix}joint_a5_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="${prefix}joint_a6_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+
+  <joint name="${prefix}joint_a6">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+
+  <actuator name="${prefix}joint_a6_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
+<transmission name="${prefix}joint_a7_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+
+  <joint name="${prefix}joint_a7">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+
+  <actuator name="${prefix}joint_a7_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
   </xacro:macro>
 </robot>
 
